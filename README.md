@@ -9,4 +9,4 @@ Enjoy learning!
 
 ## Table of Contents
 
-- [Section 01 - Introduction](README/section-01-introduction.md)
+- [Section 01 - Introduction](section-01/README.md)
