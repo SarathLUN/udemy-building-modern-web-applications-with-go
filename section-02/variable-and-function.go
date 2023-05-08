@@ -31,6 +31,7 @@ func main() {
 	whatWasSaid, myInt = saySomethingElse()
 	// print the value of the variable
 	fmt.Println("The function returned", whatWasSaid, myInt)
+
 }
 
 // create function saySomething that returns a string "Something"
@@ -42,3 +43,4 @@ func saySomething() string {
 func saySomethingElse() (string, int) {
 	return "Something Else", 7
 }
+
