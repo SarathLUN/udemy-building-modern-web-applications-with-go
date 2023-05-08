@@ -33,3 +33,9 @@
 - checkout the code in [variable-and-function.go](variable-and-function.go) file.
 
 ## Pointers
+
+- we start by creating new file: `pointer.go`
+- this file will have function `main` & `changeUsingPointer`
+- in function `main` we declare a local variable which is not accessible from another function
+- however we will use pointer of that variable as param for function `changeUsingPointer` and rewrite new value on it.
+- also notice that function `changeUsingPointer` is not return anything.
