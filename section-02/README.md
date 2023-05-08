@@ -15,7 +15,7 @@
   ```
 
 - we must use the variable after we declare it, otherwise we will get an error.
-- then we make use of variable by using `fmt.Println()` function. the syntax is:
+- here we make use of variable by print it out with `fmt.Println()` function. the syntax is:
 
   ```go
   fmt.Println(variableName)
