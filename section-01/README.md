@@ -41,8 +41,10 @@ go version go1.20.4 darwin/amd64 # my version
 
 - [set up Go workspace](https://golang.org/doc/code.html#Workspaces)
 - install your favorite IDE or text editor. I will use [GoLand](https://www.jetbrains.com/go/) for this course.
-- now we can start coding a small program to test if everything is working fine. create a file `main.go` and add the
-  following code:
+
+## Hello, World!
+
+- now we can start coding a small program to test if everything is working fine. 
 - first we need to initialize a Go module by running command `go mod init <full package name>`, in my case, I initialize
   a Go module with name `github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-01`
 
@@ -73,7 +75,7 @@ go 1.20
 
 ```
 
-- now we can add the following code to `main.go` file:
+- create a file `main.go` and add the following code:
 
 ```go
 //main.go
