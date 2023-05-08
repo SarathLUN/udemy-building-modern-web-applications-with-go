@@ -13,6 +13,7 @@ func main() {
 
 // create function that change value of a variable
 func changeUsingPointer(s *string)  {
+  fmt.Println("s is set to:", s)
   newValue := "Red" 
   *s = newValue
 }
