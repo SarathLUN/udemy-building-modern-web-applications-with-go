@@ -19,22 +19,4 @@
     fmt.Println(variableName)
     ```
 
-- now let run our program to see the result:
-
-    ```go
-    package main
-
-    import "fmt"
-
-    func main() {
-        var name string
-        name = "John"
-        fmt.Println(name)
-    }
-    ```
-
-    ```shell
-    $ go run main.go
-    John
-    ```
-  
+- checkout the code in [main.go](main.go) file.
