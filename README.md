@@ -10,3 +10,4 @@ Enjoy learning!
 ## Table of Contents
 
 - [Section 01 - Introduction](section-01/README.md)
+- [Section 02 - Overview of the Go Language](section-02/README.md)
