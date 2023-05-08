@@ -39,3 +39,5 @@
 - in function `main` we declare a local variable which is not accessible from another function
 - however we will use pointer of that variable as param for function `changeUsingPointer` and rewrite new value on it.
 - also notice that function `changeUsingPointer` is not return anything.
+- if we try to print out the value of pointer it will show the memory address in hexadecimal.
+- code of this topic: [pointer.go](pointer.go)
