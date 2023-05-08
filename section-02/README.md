@@ -8,13 +8,13 @@
   var variableName variableType
   ```
 
-- we must use the variable after we declare it, otherwise we will get an error.
 - we can assign value to a variable by using `=` operator. the syntax is:
 
   ```go
   variableName = value
   ```
 
+- we must use the variable after we declare it, otherwise we will get an error.
 - then we make use of variable by using `fmt.Println()` function. the syntax is:
 
   ```go
