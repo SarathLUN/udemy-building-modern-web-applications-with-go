@@ -44,6 +44,13 @@ now, let look at examples:
 - install your favorite IDE or text editor.
 - now we can start coding a small program to test if everything is working fine. create a file `main.go` and add the
   following code:
+- first we need to initialize a Go module by running command `go mod init <full package name>`
+
+```shell
+$ go mod init github.com/SarathLUN/udemy-building-modern-web-applications-with-go
+go: creating new go.mod: module github.com/SarathLUN/udemy-building-modern-web-applications-with-go
+
+```
 
 ```go
 package main
@@ -61,6 +68,7 @@ func main() {
 ```shell
 $ go run main.go
 Hello, World!
+
 ```
 
 ## Section 2: Overview of the Go Language
