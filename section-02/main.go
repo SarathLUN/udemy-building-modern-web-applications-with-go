@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+// declare a package level variable
+var myInt int
+
 func main() {
 	// declare a string variable
 	var whatToSay string
@@ -19,4 +22,23 @@ func main() {
 	// print the value of the variable
 	fmt.Println("i is set to", i)
 
+	// declare a variable by using ':=' to store return from function saySomething
+	whatWasSaid := saySomething()
+	// print the value of the variable
+	fmt.Println("The function returned", whatWasSaid)
+
+	// use variable whatWasSaid and myInt to store return from function saySomethingElse
+	whatWasSaid, myInt = saySomethingElse()
+	// print the value of the variable
+	fmt.Println("The function returned", whatWasSaid, myInt)
+}
+
+// create function saySomething that returns a string "Something"
+func saySomething() string {
+	return "Something"
+}
+
+// create function saySomethingElse that returns a string "Something Else" and an int 7
+func saySomethingElse() (string, int) {
+	return "Something Else", 7
 }
