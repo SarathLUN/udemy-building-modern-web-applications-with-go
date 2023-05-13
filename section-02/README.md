@@ -100,3 +100,21 @@ func main() {
 - execute by `go run receiver.go`.
 - this is similar to method in OOP concept.
 - the benefit of this is we can perform some logic before returning data of the struct.
+
+## Map & Slide
+
+Key takeaways:
+
+1. Data structures are important for storing and organizing data in programs.
+2. Simple variables can store individual values of different types.
+3. Maps are a data structure used to store key-value pairs. They are created using the "make" keyword and can store various data types.
+4. Maps are accessed using keys and can be overwritten to update values.
+5. Maps are useful for fast data access and are immutable, meaning they stay constant regardless of their usage in different parts of the program.
+6. Maps are not sorted, so the order of elements cannot be assumed.
+7. Slices are another data structure similar to arrays, commonly used in Go.
+8. Slices can store multiple values of the same type and can be dynamically expanded using the "append" function.
+9. Slices can be sorted and manipulated using various built-in functions.
+10. Slices can be declared using the shorthand syntax and can be accessed using index ranges.
+
+- create file `map-slide.go`
+- execute by `go run map-slide.go`
