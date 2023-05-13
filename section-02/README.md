@@ -66,6 +66,14 @@ func main() {
 Ex:
 
 ```go
+// other/hello.go
+package other
+
+var SomeText = "Hello World!"
+
+```
+
+```go
 // main.go
 package main
 
@@ -77,14 +85,6 @@ import (
 func main() {
 	log.Println(other.SomeText)
 }
-```
-
-```go
-// other/hello.go
-package other
-
-var SomeText = "Hello World!"
-
 ```
 
 - each data type has it own default value:
