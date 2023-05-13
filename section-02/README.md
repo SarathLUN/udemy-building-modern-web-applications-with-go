@@ -41,3 +41,56 @@
 - also notice that function `changeUsingPointer` is not return anything.
 - if we try to print out the value of pointer it will show the memory address in hexadecimal.
 - code of this topic: [pointer.go](pointer.go)
+
+## Types & Structs
+
+- we start by creating new file: `types-and-structs.go`
+- be careful with variable shadowing, when we initialize a new variable, make sure it is unique name.
+
+```go
+package main
+
+import "log"
+
+s := "Hello World!"
+
+func main() {
+	s := "Something Else!" // variable shadowing 
+	log.Println(s)
+	// output: Something Else!
+}
+```
+
+- if we want the struct, field, variable is exposed to outside the package, we need to use capitalize.
+
+Ex:
+
+```go
+// main.go
+package main
+
+import (
+	"log"
+	"other"
+)
+
+func main() {
+	log.Println(other.SomeText)
+}
+```
+
+```go
+// other/hello.go
+package other
+
+var SomeText = "Hello World!"
+
+```
+
+- each data type has it own default value:
+  - default value of `string` is ""
+  - default value of `int` is 0
+  - default value of `bool` is false
+  - and more [here](https://golangbyexample.com/go-default-zero-value-all-types/)
+- when we initialize a variable or a struct without specify it value, the default value will be assigned.
+ 
