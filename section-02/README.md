@@ -94,3 +94,9 @@ func main() {
   - and more [here](https://golangbyexample.com/go-default-zero-value-all-types/)
 - when we initialize a variable or a struct without specify it value, the default value will be assigned.
  
+## Receiver
+
+- create file `receiver.go`.
+- execute by `go run receiver.go`.
+- this is similar to method in OOP concept.
+- the benefit of this is we can perform some logic before returning data of the struct.
