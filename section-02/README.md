@@ -88,12 +88,12 @@ func main() {
 ```
 
 - each data type has it own default value:
-  - default value of `string` is ""
-  - default value of `int` is 0
-  - default value of `bool` is false
-  - and more [here](https://golangbyexample.com/go-default-zero-value-all-types/)
+    - default value of `string` is ""
+    - default value of `int` is 0
+    - default value of `bool` is false
+    - and more [here](https://golangbyexample.com/go-default-zero-value-all-types/)
 - when we initialize a variable or a struct without specify it value, the default value will be assigned.
- 
+
 ## Receiver
 
 - create file `receiver.go`.
@@ -107,9 +107,11 @@ Key takeaways:
 
 1. Data structures are important for storing and organizing data in programs.
 2. Simple variables can store individual values of different types.
-3. Maps are a data structure used to store key-value pairs. They are created using the "make" keyword and can store various data types.
+3. Maps are a data structure used to store key-value pairs. They are created using the "make" keyword and can store
+   various data types.
 4. Maps are accessed using keys and can be overwritten to update values.
-5. Maps are useful for fast data access and are immutable, meaning they stay constant regardless of their usage in different parts of the program.
+5. Maps are useful for fast data access and are immutable, meaning they stay constant regardless of their usage in
+   different parts of the program.
 6. Maps are not sorted, so the order of elements cannot be assumed.
 7. Slices are another data structure similar to arrays, commonly used in Go.
 8. Slices can store multiple values of the same type and can be dynamically expanded using the "append" function.
@@ -119,10 +121,11 @@ Key takeaways:
 - create file `map-slide.go`
 - execute by `go run map-slide.go`
 
-# Re-Structure Package `section-02`
+### Re-Structure Package `section-02`
 
 - up-to this point, I would like to re-structure the package so that we can run from our IDE.
-- the below structure make `main.go` as our entry point and in the function `main` we can call to other package with function `Start()`.
+- the below structure make `main.go` as our entry point and in the function `main` we can call to other package with
+  function `Start()`.
 
 ```shell
 .
@@ -161,3 +164,48 @@ func main() {
 }
 
 ```
+
+## decision
+
+- file `my_decision_structure/decision.go`.
+- run the package from function `main` in the `main.go` file.
+- we can use `&&` for AND operation and `||` for OR operation.
+- `!` is used to check opposite, means `not` 
+- syntax `if` statement:
+
+```go
+if condition {
+action
+} else if condition {
+action
+} else if ... {
+action
+}
+
+...
+
+} else {
+action
+}
+```
+
+- The switch statement is another decision-making structure that simplifies handling multiple cases. It checks the value
+  of a variable against different cases and executes the corresponding code block for the matching case.
+- In Go, the switch statement stops executing as soon as it finds a matching case, unlike some other programming
+  languages where it continues to evaluate subsequent cases.
+- syntax:
+
+```go
+switch myVar
+case 1:
+    action
+case 2:
+    action
+    
+...
+	
+default:
+	action
+```
+
+
