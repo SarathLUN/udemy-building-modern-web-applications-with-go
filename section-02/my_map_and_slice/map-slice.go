@@ -1,4 +1,4 @@
-package main
+package my_map_and_slice
 
 import (
 	"log"
@@ -10,7 +10,8 @@ type People struct {
 	LastName  string
 }
 
-func main() {
+// Start : this package we will learn about map and slice.
+func Start() {
 	myMap := make(map[string]string)
 	myMap["dog"] = "Hello"
 	myMap["other-dog"] = "World!"

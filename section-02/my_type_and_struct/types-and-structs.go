@@ -1,4 +1,4 @@
-package main
+package my_type_and_struct
 
 import (
 	"log"
@@ -15,7 +15,8 @@ type User struct {
 	BirthDate   time.Time
 }
 
-func main() {
+// Start : this package we will learn about type system of Go and struct.
+func Start() {
 	user := User{
 		FirstName: "Tony",
 		LastName:  "Stark",

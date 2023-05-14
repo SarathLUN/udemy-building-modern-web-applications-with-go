@@ -1,11 +1,12 @@
-package main
+package my_variable_and_function
 
 import "fmt"
 
 // declare a package level variable
 var myInt int
 
-func main() {
+// Start : in this package we will learn about variable and function.
+func Start() {
 	// declare a string variable
 	var whatToSay string
 	// assign a value to the variable
@@ -43,4 +44,3 @@ func saySomething() string {
 func saySomethingElse() (string, int) {
 	return "Something Else", 7
 }
-
