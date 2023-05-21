@@ -208,4 +208,18 @@ default:
 	action
 ```
 
+## Loop
 
+- file `my_loop/loop-and-range.go`
+- execute by `go run my_loop/loop-and-range.go`
+- syntax:
+
+```go
+for initialization; condition; post {
+// Code to be executed repeatedly
+}
+
+```
+
+- in this session we also introduce **blank identifier** `_` when we want to ignore the returned value from a function.
+- `string` is actually immutable, so when you override the value of a string to something else, it's actually destroying one object in memory and creating an entire new one. To demonstrate this let show the memory address.

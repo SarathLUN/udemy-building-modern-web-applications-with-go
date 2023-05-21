@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-02/my_decision_structure"
-)
+import "github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-02/my_loop"
 
 func main() {
 	//my_variable_and_function.Start()
@@ -10,5 +8,6 @@ func main() {
 	//my_type_and_struct.Start()
 	//my_map_and_slice.Start()
 	//my_receiver.Start()
-	my_decision_structure.Start()
+	//my_decision_structure.Start()
+	my_loop.Start()
 }
