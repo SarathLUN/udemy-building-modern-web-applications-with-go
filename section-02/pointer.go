@@ -1,9 +1,9 @@
-package my_pointer
+package main
 
 import "fmt"
 
 // Start : this package we will learn about pointer
-func Start() {
+func main() {
 	myString := "Green"
 	fmt.Println("Before calling function:", myString)
 	// change variable whatWasSaid by using Pointer

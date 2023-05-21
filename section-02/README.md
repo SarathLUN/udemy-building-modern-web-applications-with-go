@@ -121,53 +121,9 @@ Key takeaways:
 - create file `map-slide.go`
 - execute by `go run map-slide.go`
 
-### Re-Structure Package `section-02`
-
-- up-to this point, I would like to re-structure the package so that we can run from our IDE.
-- the below structure make `main.go` as our entry point and in the function `main` we can call to other package with
-  function `Start()`.
-
-```shell
-.
-|-- README.md
-|-- go.mod
-|-- main.go
-|-- my_map_and_slice
-|   `-- map-slice.go
-|-- my_pointer
-|   `-- pointer.go
-|-- my_receiver
-|   `-- receiver.go
-|-- my_type_and_struct
-|   `-- types-and-structs.go
-`-- my_variable_and_function
-    `-- variable-and-function.go
-```
-
-```go
-package main
-
-import (
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-02/my_map_and_slice"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-02/my_pointer"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-02/my_receiver"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-02/my_type_and_struct"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-02/my_variable_and_function"
-)
-
-func main() {
-	my_variable_and_function.Start()
-	my_pointer.Start()
-	my_type_and_struct.Start()
-	my_map_and_slice.Start()
-	my_receiver.Start()
-}
-
-```
-
 ## decision
 
-- file `my_decision_structure/decision.go`.
+- file `decision.go`.
 - run the package from function `main` in the `main.go` file.
 - we can use `&&` for AND operation and `||` for OR operation.
 - `!` is used to check opposite, means `not` 
@@ -210,8 +166,8 @@ default:
 
 ## Loop
 
-- file `my_loop/loop-and-range.go`
-- execute by `go run my_loop/loop-and-range.go`
+- file `loop-and-range.go`
+- execute by `go run loop-and-range.go`
 - syntax:
 
 ```go

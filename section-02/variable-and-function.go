@@ -1,4 +1,4 @@
-package my_variable_and_function
+package main
 
 import "fmt"
 
@@ -6,7 +6,7 @@ import "fmt"
 var myInt int
 
 // Start : in this package we will learn about variable and function.
-func Start() {
+func main() {
 	// declare a string variable
 	var whatToSay string
 	// assign a value to the variable

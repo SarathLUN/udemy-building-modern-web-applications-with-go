@@ -1,4 +1,4 @@
-package my_receiver
+package main
 
 import "log"
 
@@ -11,7 +11,7 @@ func (m myStruct) printFirstName() string {
 }
 
 // Start : this package we will learn about receiver in Go.
-func Start() {
+func main() {
 	var myVar myStruct
 	myVar.FirstName = "John"
 

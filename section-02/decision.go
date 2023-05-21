@@ -1,9 +1,9 @@
-package my_decision_structure
+package main
 
 import "log"
 
 // Start : this package we will learn about if and switch-case statement
-func Start() {
+func main() {
 	var isTrue bool
 	isTrue = true
 	if isTrue {
