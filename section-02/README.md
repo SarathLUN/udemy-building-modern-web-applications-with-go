@@ -179,3 +179,19 @@ for initialization; condition; post {
 
 - in this session we also introduce **blank identifier** `_` when we want to ignore the returned value from a function.
 - `string` is actually immutable, so when you override the value of a string to something else, it's actually destroying one object in memory and creating an entire new one. To demonstrate this let show the memory address.
+
+## Interface
+
+- we want to have a function that can operate on 2 or more difference types in param
+- then we can create an interface which will stand in the middle between the 2 types and the function that we need to use
+- in Go, the 2 types must be certified to be the member of the interface
+- to be certified to an interface, those 2 types need to implement the all methods required by the interface
+- in example file [`interface.go`](interface.go) we have 2 types: `Dog` and `Gorilla`
+- we want to use only 1 function `PrintInfo()` without create method for each type
+- so we use interface `Animal` in the middle
+- so function `PrintInfo()` take param `Animal` but not `Dog` ether `Gorilla`
+- then to be able to past type `Dog` or `Gorilla` into function `PrintInfo()`, they need to be part of `Animal`
+- to do so `Dog` and `Gorilla` need to implement required method `Says()` & `NumberOfLegs()` for interface `Animal`
+- after certified, `Dog` or `Gorilla` are `Animal` which mean they are acceptable by function `PrintInfo()`
+- so we don't need to create separate function for each type.
+- however, in Go, most receiver are pointer type as best practice, for faster performance.
