@@ -1,8 +1,8 @@
 package main
 
 import (
+	"fmt"
 	"log"
-	"reflect"
 )
 
 type Animal interface {
@@ -53,6 +53,6 @@ func main() {
 }
 
 func PrintInfo(a Animal) {
-	t := reflect.TypeOf(a)
+	t := fmt.Sprintf("%T", a)
 	log.Println(t, "says", a.Says(), "and has", a.NumberOfLegs(), "legs.")
 }
