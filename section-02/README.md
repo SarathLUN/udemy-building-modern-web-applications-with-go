@@ -201,3 +201,9 @@ for initialization; condition; post {
   - Dependency injection: Interfaces are often used in dependency injection scenarios. By defining interfaces for dependencies, you can write code that depends on those interfaces rather than concrete implementations. This promotes loose coupling between components and makes it easier to swap out implementations without affecting the code that uses them.
   - Testability: Interfaces make it easier to write unit tests for your code. By depending on interfaces instead of concrete types, you can easily create mock implementations of those interfaces for testing purposes. This allows you to isolate the code under test and provide controlled behavior for testing different scenarios.
   - Code extensibility: Interfaces provide a contract that specifies the required behavior. If you want to extend your code by adding new types that satisfy an existing interface, you can do so without modifying the existing code. This makes it easier to extend and evolve your codebase over time.
+
+## Packages
+
+- file `myPackage.go` is has initiate a struct `SomeType` from package `helpers`.
+- packages is used to organize our code structure.
+- packages can be standard packages/library or user define packages.
