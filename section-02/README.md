@@ -204,6 +204,15 @@ for initialization; condition; post {
 
 ## Packages
 
+- in Go, we use `go mod` tool to manage package dependencies.
+- we initialize package manager by command `go mod init <full_path_of_git_repository>`
+
+Ex:
+
+```shell
+> go mod init github.com/SarathLUN/udemy-building-modern-web-applications-with-go
+```
+
 - file `myPackage.go` is has initiate a struct `SomeType` from package `helpers`.
 - packages is used to organize our code structure.
 - packages can be standard packages/library or user define packages.
