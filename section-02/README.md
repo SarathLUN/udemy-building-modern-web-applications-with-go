@@ -216,3 +216,13 @@ Ex:
 - file `myPackage.go` is has initiate a struct `SomeType` from package `helpers`.
 - packages is used to organize our code structure.
 - packages can be standard packages/library or user define packages.
+
+## Channels
+
+- channel transfer data from 1 part of our program to another
+- we create channel with `make` keyword with specify data type to be hold by that channel.
+- file `channels.go` in function `main` create a channel which hold `int`
+- we use `defer` to close the channel at the end of execution
+- we create another function `CalculateValue()` that will take a channel as argument and not return anything, instead it write directly to the channel.
+- so to put data into a channel we use syntax: `channelName <- value`
+- and to get data from a channel we use syntax: `<- channelName`
