@@ -226,3 +226,10 @@ Ex:
 - we create another function `CalculateValue()` that will take a channel as argument and not return anything, instead it write directly to the channel.
 - so to put data into a channel we use syntax: `channelName <- value`
 - and to get data from a channel we use syntax: `<- channelName`
+
+## JSON
+
+- file `read-and-write-json.go` we defined a struct with annotation `json:<field_name>`
+- the struct need to be conformed with json structure
+- we use function `Unmarshal` from package `json` to read json data into struct
+- we use function `MarshalIndent` to write struct into json data
