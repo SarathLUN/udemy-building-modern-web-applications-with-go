@@ -233,3 +233,44 @@ Ex:
 - the struct need to be conformed with json structure
 - we use function `Unmarshal` from package `json` to read json data into struct
 - we use function `MarshalIndent` to write struct into json data
+
+## Writing Tests in Go
+
+- as we have many go file in directory `section-02` we will not able to run `go test` in this directory.
+- so we start by creating subdirectory `Writing-Tests-in-Go` under `section-02`.
+- then we create the 2 files `Writing-Tests-in-Go.go` for main file and `Writing-Tests-in-Go_test.go` for test file.
+- naming the test file must have `_test` at the end, and best practice is to prefix with main file name.
+- as you can see in our case, we want to test file `Writing-Tests-in-Go.go` so we create test file with name `Writing-Tests-in-Go_test.go`
+- we create test function by prefix with word `Test` with capital `T` then follow by the name of the function we want to test. In our case we want to test function `divide()` so our test function is `TestDivide()`
+- now we can run test as below example commands:
+
+```shell
+>cd Writing-Tests-in-Go
+>go test
+PASS
+ok  	github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-02/Writing-Tests-in-Go	0.724s
+# or we can run with -v option for verbose mode
+>go test -v #verbose
+=== RUN   TestDivide
+--- PASS: TestDivide (0.00s)
+PASS
+ok  	github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-02/Writing-Tests-in-Go	0.027s
+```
+
+- we can also check our test coverage
+
+```shell
+>go test -cover
+
+```
+
+- the coverage can be exported into HTML format with below command:
+
+```shell
+>go test -coverprofile=coverage.out && go tool cover -html=coverage.out
+```
+
+- the command will start the browser as below screen
+
+![test-coverage-html-browser](Writing-Tests-in-Go/test-coverage-html-browser.png)
+
