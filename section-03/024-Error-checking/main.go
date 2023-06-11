@@ -35,7 +35,6 @@ func main() {
 	if err != nil {
 		log.Fatalln("can't start server;", err.Error())
 	}
-
 }
 
 func Divide(w http.ResponseWriter, r *http.Request) {
