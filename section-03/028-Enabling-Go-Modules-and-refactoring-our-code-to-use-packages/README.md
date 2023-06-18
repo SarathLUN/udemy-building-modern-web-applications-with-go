@@ -28,3 +28,8 @@ mv render.go pkg/render/
 - then we make function `renderTemplate()` to be exportable by just capitalize the function name to `RenderTemplate()`.
 - in the handler function we need to import package `render` and access to function `RenderTemplate()`.
 - in file `main.go` we import package `handlers` and access to function `Home()` and `About()`.
+- then we start our server by below command:
+
+```shell
+go run cmd/web/*.go # this will load imported packages and compile.
+```
