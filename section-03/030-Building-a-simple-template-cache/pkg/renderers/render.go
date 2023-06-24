@@ -1,4 +1,4 @@
-package render
+package renderers
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 
 var tc = make(map[string]*template.Template)
 
-// RenderTemplate render template using html/template
+// RenderTemplate renderers template using html/template
 func RenderTemplate(w http.ResponseWriter, t string) {
 	var tmpl *template.Template
 	var err error
