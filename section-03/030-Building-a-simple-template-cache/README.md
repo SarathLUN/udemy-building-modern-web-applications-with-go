@@ -14,4 +14,3 @@ go mod edit -module github.com/SarathLUN/udemy-building-modern-web-applications-
 - in package `renderers` function `RenderTemplate()` we check if the template already exist in the template cache (tc).
 - if the template that we are looking for not yet exist in the cache, we render new one by calling to function `createTemplateCache()` then store into template cache.
 - or else, we just re-use the existing template from cache.
-- 
