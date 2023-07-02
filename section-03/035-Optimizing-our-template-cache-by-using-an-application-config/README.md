@@ -26,4 +26,4 @@ go mod edit -module github.com/SarathLUN/udemy-building-modern-web-applications-
 - in the current state, if we change template, it will not load to the client since it read from cache.
 - so in function `RenderTemplate()` we check if we want to use existing cache or create new one.
 - this time we try to set `app.UseCache = false` so it will always read and render template from disk, not from cache. this is useful for development mode.
-- this is just one of example, in the future use `AppConfig` to configure our application behaviour.
+- this is just one of example, in the future use `AppConfig` to configure our application.
