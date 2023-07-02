@@ -2,11 +2,12 @@ package renderers
 
 import (
 	"bytes"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-03/035-Optimizing-our-template-cache-by-using-an-application-config/pkg/config"
 	"html/template"
 	"log"
 	"net/http"
 	"path/filepath"
+
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-03/035-Optimizing-our-template-cache-by-using-an-application-config/pkg/config"
 )
 
 var app *config.AppConfig
@@ -47,24 +48,24 @@ func RenderTemplate(w http.ResponseWriter, tmpl string) {
 
 func CreateTemplateCache() (map[string]*template.Template, error) {
 	myCache := map[string]*template.Template{}
-	// get all files named *.page.tmpl from ./templates/
-	pages, err := filepath.Glob("./templates/*.page.tmpl")
+	// get all files named *.page.html from ./templates/
+	pages, err := filepath.Glob("./templates/*.page.html")
 	if err != nil {
 		return myCache, err
 	}
-	// range through all files ending with *.page.tmpl
+	// range through all files ending with *.page.html
 	for _, page := range pages {
 		name := filepath.Base(page)
 		ts, err := template.New(name).ParseFiles(page)
 		if err != nil {
 			return myCache, err
 		}
-		matches, err := filepath.Glob("./templates/*.layout.tmpl")
+		matches, err := filepath.Glob("./templates/*.layout.html")
 		if err != nil {
 			return myCache, err
 		}
 		if len(matches) > 0 {
-			ts, err = ts.ParseGlob("./templates/*.layout.tmpl")
+			ts, err = ts.ParseGlob("./templates/*.layout.html")
 			if err != nil {
 				return myCache, err
 			}
