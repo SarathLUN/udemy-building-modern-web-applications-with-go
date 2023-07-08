@@ -8,7 +8,7 @@ import (
 	"github.com/go-chi/chi/v5"
 )
 
-func setup_routes(app *config.AppConfig) http.Handler {
+func setupRoutes(app *config.AppConfig) http.Handler {
 	mux := chi.NewRouter()
 	mux.Use(WriteToConsole)
 	mux.Use(NoSurf)

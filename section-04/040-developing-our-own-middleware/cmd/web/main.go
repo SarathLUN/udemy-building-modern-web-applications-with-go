@@ -23,7 +23,7 @@ func main() {
 
 	srv := &http.Server{
 		Addr:    portNumber,
-		Handler: setup_routes(&app),
+		Handler: setupRoutes(&app),
 	}
 
 	log.Println("starting web server on port", portNumber)
