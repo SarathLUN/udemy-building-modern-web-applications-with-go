@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-04/038-Using-package-pat-for-routing/pkg/handlers"
 	"log"
 	"net/http"
 
@@ -19,10 +20,15 @@ func main() {
 	app.TemplateCache = tc
 	app.UseCache = false
 
+	// create new repo
+	repo := handlers.NewRepo(&app)
+	handlers.NewHandlers(repo)
+
+	// render new template
 	renderers.NewTemplate(&app)
 
 	srv := &http.Server{
-		Addr: portNumber,
+		Addr:    portNumber,
 		Handler: setup_routes(&app),
 	}
 
