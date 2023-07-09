@@ -8,9 +8,9 @@
 go mod edit -module github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-04/038-Using-package-pat-for-routing
 ```
 
-- in this session we use package pat to setup our routers.
+- in this session we use package pat to set up our routers.
 - we create separate file `cmd/web/router.go`
-- this is the github link to package [pat](https://github.com/bmizerany/pat)
+- this is the GitHub link to package [pat](https://github.com/bmizerany/pat)
 - install pat:
 
 ```shell
