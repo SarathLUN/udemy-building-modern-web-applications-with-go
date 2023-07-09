@@ -1,4 +1,4 @@
-# Section 6: Choosing a project and working with form
+# Section 6: Choosing a project and working with forms
 
 ## Lesson #043: What are we going to build
 
