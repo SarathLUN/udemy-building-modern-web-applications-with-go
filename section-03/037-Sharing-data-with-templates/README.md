@@ -14,4 +14,4 @@ go mod edit -module github.com/SarathLUN/udemy-building-modern-web-applications-
 - when we try to run our program, we got error of cycle import not allowed.
 - this is the example to show that Go is strickly on this.
 - now we can create another package called `models` and put `TemplateData` in there. This package will never import from any package. Then make sure we change our code to `TemplateDate` from `models`, not `handlers` anymore.
-- we also introducing middleware concept to add default template data by function `AddDefaultData()` in package `renderers`. In the future if we want to add any default data which will able to all the templates, we can use this function.
+- we're also introducing middleware concept to add default template data by function `AddDefaultData()` in package `renderers`. In the future if we want to add any default data which will able to all the templates, we can use this function.
