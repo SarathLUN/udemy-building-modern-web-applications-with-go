@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-05/041-install-and-setting-up-a-session-package/pkg/handlers"
 	"github.com/alexedwards/scs/v2"
 	"log"
 	"net/http"
@@ -36,6 +37,11 @@ func main() {
 	app.TemplateCache = tc
 	app.UseCache = false
 
+	// create new repo
+	repo := handlers.NewRepo(&app)
+	handlers.NewHandlers(repo)
+
+	// render new template
 	renderers.NewTemplate(&app)
 
 	srv := &http.Server{
