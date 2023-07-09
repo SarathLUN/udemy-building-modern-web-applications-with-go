@@ -14,3 +14,4 @@ Enjoy learning!
 - [Section 03 - Build a basic web applicaiton](section-03/README.md)
 - [Section 04 - Improve Routing and Middleware](section-04/README.md)
 - [Section 05 - State Management with Sessions](section-05/README.md)
+- [Section 06 - Choosing a project and working with form](section-06/README.md)
