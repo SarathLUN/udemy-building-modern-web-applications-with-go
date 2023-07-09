@@ -30,8 +30,7 @@ func NewHandlers(r *Repository) {
 
 // Home : handler function for "/"
 func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
-	remoteIP := r.RemoteAddr
-	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
+	m.App.Session.Put(r.Context(), "remote_ip", r.RemoteAddr)
 	renderers.RenderTemplate(w, "home.page.tmpl", &models.TemplateData{})
 }
 
@@ -40,6 +39,8 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 	// perform some logic
 	stringMap := make(map[string]string)
 	stringMap["test"] = "Hello, again!"
+	// query client IP address and pass to template
+	stringMap["remote_ip"] = m.App.Session.GetString(r.Context(), "remote_ip")
 	// send data to template
 	renderers.RenderTemplate(w, "about.page.tmpl", &models.TemplateData{
 		StringMap: stringMap,
