@@ -20,6 +20,7 @@ go mod edit -module github.com/SarathLUN/udemy-building-modern-web-applications-
 - we create a struct `Repository` and variable `Repo` which type of Repository.
 - we create function `NewRepo()` to instantiate Repository.
 - we create function `NewHandlers()` to set repository for handler.
+- then in the `main` function, we initial new repo `NewRepo()` and wrapped by handler `NewHandlers()`.
 - then we set receiver in our handlers `Home()` and `About()`.
 - so in function `main()` when we access to handler need to specify receiver, so it become `handlers.Repo.Home` something like that.
 - to demonstrate how it works, let pull something out of AppConfig, in this case let use `UseCache`, then in **main** set the `app.UseCache = true`.
