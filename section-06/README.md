@@ -4,3 +4,4 @@
 - [lesson 44: Seting up our project](./044-setting-up-our-project/README.md)
 - [lesson 45: Enabling static files](./045-enabling-static-files/README.md)
 - [lesson 46: Creating pages as HTML](./046-creating-pages-as-html/README.md)
+- [lesson 47: Creating a landing page](./047-creating-a-landing-page/README.md)
