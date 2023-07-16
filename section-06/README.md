@@ -6,4 +6,5 @@
 - [lesson 46: Creating pages as HTML](./046-creating-pages-as-html/README.md)
 - [lesson 47: Creating a landing page](./047-creating-a-landing-page/README.md)
 - [lesson 48: Creating a page for each room](./048-create-a-page-for-each-room/README.md)
+- [lesson 49: Adding a form to search availability](./049-adding-a-form-to-search-availability/README.md)
 
