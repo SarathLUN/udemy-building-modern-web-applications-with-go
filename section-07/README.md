@@ -5,4 +5,5 @@
 - [lesson 54: Custom alert using Notie](./054-custom-alert-using-notie/README.md)
 - [lesson 55: Creating modals with SweetAlert](./055-create-modals-with-sweetalert/README.md)
 - [lesson 56: Implementing a Javascript module](./056-implementing-a-javascript-module/README.md)
+- [lesson 57: Adding custom alert in our javascript module](./057-adding-custom-alert-in-our-javascript-module/README.md)
 
