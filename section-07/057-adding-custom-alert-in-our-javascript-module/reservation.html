@@ -224,7 +224,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.all.min.js
     document
         .getElementById('colorButton')
         .addEventListener('click', function () {
-            attention.alert({title:"Saved",icon:"success",text:"Your data has been saved."})
+            attention.alert({title: "Saved", icon: "success", text: "Your data has been saved."})
         })
 
     const elem = document.getElementById('reservation-dates')
@@ -256,6 +256,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.all.min.js
                 icon = "success",
                 position = "top-end",
             } = p;
+            // instantiate SweetAlert Toast
             const Toast = Swal.mixin({
                 title: title,
                 icon: icon,
@@ -270,16 +271,17 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.all.min.js
                 }
             })
 
+            // run Toast
             Toast.fire();
         }
 
         let sw_alert = function (p) {
             const {
-                icon='question',
-                title='Alert Something?',
-                text='What do you want to alert?',
-                footer='',
-            }=p;
+                icon = 'question',
+                title = 'Alert Something?',
+                text = 'What do you want to alert?',
+                footer = '',
+            } = p;
             Swal.fire({
                 icon: icon,
                 title: title,
