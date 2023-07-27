@@ -7,4 +7,5 @@
 - [lesson 56: Implementing a Javascript module](./056-implementing-a-javascript-module/README.md)
 - [lesson 57: Adding custom alert in our javascript module](./057-adding-custom-alert-in-our-javascript-module/README.md)
 - [lesson 58: Using our javascript module on the "Book Now" button](./058-using-our-javascript-module-on-the-Book-Now-button/README.md)
+- [lesson 59: What is CSS, and How does it work?](./059-what-is-css-how-does-it-work/README.md)
 
