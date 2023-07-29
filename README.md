@@ -16,3 +16,4 @@ Enjoy learning!
 - [Section 05 - State Management with Sessions](./section-05/README.md)
 - [Section 06 - Choosing a project and working with forms](./section-06/README.md)
 - [Section 07 - Javascript and CSS](./section-07/README.md)
+- [Section 08 - Converting our HTML to Go templates, and creating handlers](./section-08/README.md)
