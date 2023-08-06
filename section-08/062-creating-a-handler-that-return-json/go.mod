@@ -1,4 +1,4 @@
-module github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/061-creating-handlers-for-our-forms-and-adding-csrf-protection
+module github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/062-creating-a-handler-that-return-json
 
 go 1.20
 
