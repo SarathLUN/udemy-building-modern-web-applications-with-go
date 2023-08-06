@@ -12,19 +12,20 @@ git checkout -b 08-061-creating-handlers-for-our-forms-and-adding-csrf-protectio
 
 ```shell
 cp -rfv 060-converting-our-pages-to-go-templates 061-creating-handlers-for-our-forms-and-adding-csrf-protection
+cd section-08/061-creating-handlers-for-our-forms-and-adding-csrf-protection/
+goland .
 ```
 
-- then we need to replace in files in **Goland** press `CMD + SHIFT + R`, replace "061-creating-handlers-for-our-forms-and-adding-csrf-protection" with "061-creating-handlers-for-our-forms-and-adding-csrf-protection"
+- then we need to replace in files in **Goland** press `CMD + SHIFT + R`, replace "060-converting-our-pages-to-go-templates" with "061-creating-handlers-for-our-forms-and-adding-csrf-protection"
 
 - we also need to update our go mod file.
 
 ```shell
-cd section-08/061-creating-handlers-for-our-forms-and-adding-csrf-protection/
 go mod edit -module github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/061-creating-handlers-for-our-forms-and-adding-csrf-protection
 ```
 
 - now if we run our application, we have few form that doesn't submit to do anything yet. Let start from form **Search for Availability**
-- currently, attribute `action=""`, typically we can post to same URL because we will use difference method
+- currently, attribute `action=""` is set to blank, typically we can post to same URL because we will use difference method
 
 ```html
 <form action="/search-availability" method="post" novalidate class="needs-validation">
@@ -61,7 +62,7 @@ func (m *Repository) PostAvailability(w http.ResponseWriter, r *http.Request) {
 td.CSRFToken = nosurf.Token(r)
 ```
 
-- function `Token()` required a pointer to `*http.Request`, so we need to refactor the function `AddDefaultData` to add one more parameter.
+- This function `Token()` required a pointer to `*http.Request`, so we need to refactor the function `AddDefaultData` to add one more parameter.
 - then we will get another error because function `RenderTemplate` doesn't have `*http.Request` yet, so we also need to refactor this function.
 
 ```go
