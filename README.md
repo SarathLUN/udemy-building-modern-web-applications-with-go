@@ -17,3 +17,11 @@ Enjoy learning!
 - [Section 06 - Choosing a project and working with forms](./section-06/README.md)
 - [Section 07 - Javascript and CSS](./section-07/README.md)
 - [Section 08 - Converting our HTML to Go templates, and creating handlers](./section-08/README.md)
+
+## Prepare before starting the new lesson
+
+- create new branch for git repository and we need to do this from the root directory of our project
+
+```shell
+git checkout -b 08-063-sending-and-processing-an-ajax-request
+```
