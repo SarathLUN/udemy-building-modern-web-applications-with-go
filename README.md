@@ -23,5 +23,5 @@ Enjoy learning!
 - create new branch for git repository and we need to do this from the root directory of our project
 
 ```shell
-git checkout -b 08-063-sending-and-processing-an-ajax-request
+git checkout -b 08-064-sending-ajax-post-and-generalizing-our-custom-function
 ```
