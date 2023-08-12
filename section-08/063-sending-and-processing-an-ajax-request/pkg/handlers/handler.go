@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/062-creating-a-handler-that-return-json/pkg/config"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/062-creating-a-handler-that-return-json/pkg/models"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/062-creating-a-handler-that-return-json/pkg/renderers"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/063-sending-and-processing-an-ajax-request/pkg/config"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/063-sending-and-processing-an-ajax-request/pkg/models"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/063-sending-and-processing-an-ajax-request/pkg/renderers"
 )
 
 // Repository is the repository type

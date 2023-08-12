@@ -1,89 +1,126 @@
 # Section 8: Converting our HTML to Go Templates, and creating handlers
 
-## Lesson #062: Creating a handler that return JSON
+## Lesson #063: Sending and Processing an AJAX request
 
-- first thing first, let create new git branch to secure our source code with version control
-
-```shell
-git checkout -b 08-062-creating-a-handler-that-return-json
-```
-
-- then let copy project from previous lesson
+- first we need to refactor our project
+- replace all path of imported packages from `062-creating-a-handler-that-return-json`
+  to `063-sending-and-processing-an-ajax-request`
+- then edit go mod file
 
 ```shell
-cd section-08
-cp -rfv 061-creating-handlers-for-our-forms-and-adding-csrf-protection 062-creating-a-handler-that-return-json
-cd 062-creating-a-handler-that-return-json
+go mod edit -module github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/063-sending-and-processing-an-ajax-request
 ```
 
-- then we need to update go mod file
+- in this lesson we will implement AJAX on the popup form in page `/generals-quarters`
+- as this page is calling to JS function `custom` in the main js part in file `base.layout.tmpl`
+- first we catch the result from popup form and check to make sure it not dismiss or blank
+- then we need to execute the callback function by providing the result as parameter
 
-```shell
-go mod edit -module github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/062-creating-a-handler-that-return-json
-```
+```javascript
+async function custom(c) {
+    const {
+        msg = "",
+        title = "",
+    } = c;
 
-- start Goland from our new project folder
+    const {value: result} = await Swal.fire({
+        title: title,
+        html: msg,
+        backdrop: false,
+        focusConfirm: false,
+        showCancelButton: true,
+        willOpen: () => {
+            const elem = document.getElementById("reservation-dates-modal");
+            const rp = new DateRangePicker(elem, {
+                format: 'yyyy-mm-dd',
+                showOnFocus: true,
+            })
+        },
+        didOpen: () => {
+            document.getElementById("start").removeAttribute("disabled");
+            document.getElementById("end").removeAttribute("disabled");
+        },
+        preConfirm: () => {
+            return [
+                document.getElementById('start').value,
+                document.getElementById('end').value
+            ]
+        }
+    })
 
-```shell
-goland .
-```
-
-- in Goland, replace in files by `CMD + SHIFT + R` and find: "
-  /061-creating-handlers-for-our-forms-and-adding-csrf-protection/" replace with "
-  /062-creating-a-handler-that-return-json/"
-- As I am using Goland, I also need to refactor the project name.
-- for this learning purpose we create a new handler function called `AvailabilityJSON` in package handlers
-
-```go
-// AvailabilityJSON search for availability and response JSON
-func (m *Repository) AvailabilityJSON(w http.ResponseWriter, r *http.Request) {
-
+    if (result) {
+        if (result.dismiss !== Swal.DismissReason.cancel) {
+            if (result.value !== "") {
+                if (c.callback !== undefined) {
+                    c.callback(result);
+                } else {
+                    c.callback(false);
+                }
+            } else {
+                c.callback(false);
+            }
+        }
+    }
 }
 ```
 
-- then we add another route, and we use method `get` at this time to be easier test
+- now let add the callback function when we call to custom in page `generals.page.tmpl`
 
-```go
-mux.Get("/search-availability-json", handlers.Repo.AvailabilityJSON)
+```javascript
+attention.custom({
+    title: 'Choose your dates',
+    msg: html,
+    callback: function (result) {
+        console.log("called");
+    }
+});
 ```
 
-- then we need to create a struct to hold the json data
+- so what's happening here?
+- when someone call `attention.custom`, it pop up the dialog box
+- then choose some date and submit, the body of callback will get executed base on the result that we input as parameter
+- the result is get from the user activity, if it is not empty or dismiss
+- if we test this, we should see the browser console print out the word "called"
+- so that mean it works as expected, let implement AJAX in the callback
+- in javascript we have function `fetch()` that will run background process
 
-```go
-type jsonResponse struct {
-OK      bool   `json:"ok"`
-Message string `json:"message"`
+```javascript
+callback: function (result) {
+    console.log("called");
+    fetch('/search-availability-json')
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data);
+        });
 }
 ```
 
-- now let implement our handler to response JSON, it should look like below now
-
-```go
-func (m *Repository) AvailabilityJSON(w http.ResponseWriter, r *http.Request) {
-resp := jsonResponse{
-OK:      true,
-Message: "available",
-}
-out, err := json.Marshal(resp)
-if err != nil {
-log.Println("error marshal json:", err.Error())
-}
-w.Write(out)
-}
-```
-
-- this should work the most, but we want the client browser know that this is the json format, so we add the http header
-
-```go
-w.Header().Set("Content-Type", "application/json")
-```
-
-- let restart application and test
-- at this time we can test in the browser, and we should get json response
+- we should get below browser console
 
 ```json
-{
-  "ok": true,
-  "message": "available"
+message: "available"
+ok: true
+[[Prototype]]: Object
+```
+
+- we can also access to members of data with the `.` annotation
+
+```javascript
+callback: function (result) {
+    console.log("called");
+    fetch('/search-availability-json')
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.ok);
+            console.log(data.message);
+        });
 }
 ```
+
+- we should get browser console as below image
+
+![readme-063-01.png](./static/images/readme-063-01.png)
+
+- so now that we know can make request to our handler from javascript.
+ 

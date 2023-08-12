@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/062-creating-a-handler-that-return-json/pkg/handlers"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/063-sending-and-processing-an-ajax-request/pkg/handlers"
 	"github.com/alexedwards/scs/v2"
 	"log"
 	"net/http"
 	"time"
 
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/062-creating-a-handler-that-return-json/pkg/config"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/062-creating-a-handler-that-return-json/pkg/renderers"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/063-sending-and-processing-an-ajax-request/pkg/config"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/063-sending-and-processing-an-ajax-request/pkg/renderers"
 )
 
 const portNumber = ":8080"

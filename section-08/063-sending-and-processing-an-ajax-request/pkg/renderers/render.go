@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"path/filepath"
 
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/062-creating-a-handler-that-return-json/pkg/config"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/062-creating-a-handler-that-return-json/pkg/models"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/063-sending-and-processing-an-ajax-request/pkg/config"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/063-sending-and-processing-an-ajax-request/pkg/models"
 )
 
 var app *config.AppConfig
