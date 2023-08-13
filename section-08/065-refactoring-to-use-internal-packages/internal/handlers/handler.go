@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/pkg/config"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/pkg/models"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/pkg/renderers"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/internal/config"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/internal/models"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/internal/renderers"
 )
 
 // Repository is the repository type

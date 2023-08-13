@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/pkg/handlers"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/internal/handlers"
 	"github.com/alexedwards/scs/v2"
 	"log"
 	"net/http"
 	"time"
 
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/pkg/config"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/pkg/renderers"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/internal/config"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/internal/renderers"
 )
 
 const portNumber = ":8080"

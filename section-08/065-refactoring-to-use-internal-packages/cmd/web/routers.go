@@ -3,8 +3,8 @@ package main
 import (
 	"net/http"
 
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/pkg/config"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/pkg/handlers"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/internal/config"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/065-refactoring-to-use-internal-packages/internal/handlers"
 	"github.com/go-chi/chi/v5"
 )
 
