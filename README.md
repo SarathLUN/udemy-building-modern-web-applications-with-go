@@ -23,5 +23,7 @@ Enjoy learning!
 - create new branch for git repository and we need to do this from the root directory of our project
 
 ```shell
-git checkout -b 08-065-refactoring-to-use-internal-packages
+git checkout -b 08-066-server-side-form-validation
 ```
+
+- then go into above [Section 08](./section-08/README.md) to continue the lesson.
