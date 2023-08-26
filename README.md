@@ -23,7 +23,9 @@ Enjoy learning!
 - create new branch for git repository and we need to do this from the root directory of our project
 
 ```shell
-git checkout -b 08-066-server-side-form-validation
+git checkout -b 08-067-server-side-form-validation-2
+
+
 ```
 
 - then go into above [Section 08](./section-08/README.md) to continue the lesson.
