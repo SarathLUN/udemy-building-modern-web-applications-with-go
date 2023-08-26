@@ -3,6 +3,7 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/066-server-side-form-validation/internal/forms"
 	"log"
 	"net/http"
 
@@ -52,12 +53,14 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 
 // Reservation renders the make a reservation page and displays form
 func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
-	renderers.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{})
+	renderers.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{
+		Form: forms.New(nil),
+	})
 }
 
-// PostReservatio handle the post of reservation form
+// PostReservation handle the post of reservation form
 func (m *Repository) PostReservation(w http.ResponseWriter, r *http.Request) {
-  w.Write([]byte("PostReservation"))
+	w.Write([]byte("PostReservation"))
 }
 
 // Generals renders the room page
