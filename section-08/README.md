@@ -7,12 +7,13 @@
 - [lesson 64: Sending AJAX post and generalizing our custom function](./064-sending-ajax-post-and-generalizing-our-custom-function/README.md)
 - [lesson 65: refactoring to use internal packages](./065-refactoring-to-use-internal-packages/README.md)
 - [lesson 66: server side form validation](./066-server-side-form-validation/README.md)
+- [lesson 67: server side form validation 2](./067-server-side-form-validation-2/README.md)
 - To get started lesson 67, we need to copy our previous project directory
 
 ```shell
-cp -rfv 066-server-side-form-validation 067-server-side-form-validation-2
+cp -rfv 067-server-side-form-validation-2 068-server-side-form-validation-3
 vim 
 ```
 
-- [lesson 67: server side form validation 2](./067-server-side-form-validation-2/README.md)
+- [lesson 68: server side form validation 3](./068-server-side-form-validation-3/README.md)
 
