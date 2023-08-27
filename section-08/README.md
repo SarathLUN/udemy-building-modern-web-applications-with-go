@@ -8,12 +8,14 @@
 - [lesson 65: refactoring to use internal packages](./065-refactoring-to-use-internal-packages/README.md)
 - [lesson 66: server side form validation](./066-server-side-form-validation/README.md)
 - [lesson 67: server side form validation 2](./067-server-side-form-validation-2/README.md)
-- To get started lesson 67, we need to copy our previous project directory
+- [lesson 68: server side form validation 3](./068-server-side-form-validation-3/README.md)
+- To get started lesson 69, we need to copy our previous project directory
 
 ```shell
-cp -rfv 067-server-side-form-validation-2 068-server-side-form-validation-3
+cp -rfv 068-server-side-form-validation-3 069-server-side-form-validation-4
 vim 
+
 ```
 
-- [lesson 68: server side form validation 3](./068-server-side-form-validation-3/README.md)
+- [lesson 69: server side form validation 4](./069-server-side-form-validation-4/README.md)
 

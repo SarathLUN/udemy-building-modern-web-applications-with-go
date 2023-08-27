@@ -23,8 +23,7 @@ Enjoy learning!
 - create new branch for git repository and we need to do this from the root directory of our project
 
 ```shell
-git checkout -b 08-068-server-side-form-validation-3
-
+git checkout -b 08-069-server-side-form-validation-4
 
 ```
 
