@@ -23,7 +23,7 @@ Enjoy learning!
 - create new branch for git repository and we need to do this from the root directory of our project
 
 ```shell
-git checkout -b 08-70-displaying-a-response-to-user-after-posting-form-data
+git checkout -b 08-070-displaying-a-response-to-user-after-posting-form-data
 
 ```
 
