@@ -3,8 +3,8 @@ package main
 import (
 	"net/http"
 
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/069-server-side-form-validation-4/internal/config"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/069-server-side-form-validation-4/internal/handlers"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/070-displaying-a-response-to-user-after-posting-form-data/internal/config"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/070-displaying-a-response-to-user-after-posting-form-data/internal/handlers"
 	"github.com/go-chi/chi/v5"
 )
 
@@ -24,6 +24,7 @@ func setupRoutes(app *config.AppConfig) http.Handler {
 
 	mux.Get("/make-reservation", handlers.Repo.Reservation)
 	mux.Post("/make-reservation", handlers.Repo.PostReservation)
+	mux.Get("/reservation-summary", handlers.Repo.ReservationSummary)
 
 	fileServer := http.FileServer(http.Dir("./static/"))
 	mux.Handle("/static/*", http.StripPrefix("/static", fileServer))

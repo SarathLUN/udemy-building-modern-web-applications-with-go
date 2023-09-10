@@ -1,14 +1,16 @@
 package main
 
 import (
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/069-server-side-form-validation-4/internal/handlers"
+	"encoding/gob"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/070-displaying-a-response-to-user-after-posting-form-data/internal/handlers"
 	"github.com/alexedwards/scs/v2"
 	"log"
 	"net/http"
 	"time"
 
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/069-server-side-form-validation-4/internal/config"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/069-server-side-form-validation-4/internal/renderers"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/070-displaying-a-response-to-user-after-posting-form-data/internal/config"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/070-displaying-a-response-to-user-after-posting-form-data/internal/models"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/070-displaying-a-response-to-user-after-posting-form-data/internal/renderers"
 )
 
 const portNumber = ":8080"
@@ -17,6 +19,9 @@ var app config.AppConfig
 var session *scs.SessionManager
 
 func main() {
+
+	// register none-primitive data type into session
+	gob.Register(models.Reservation{})
 
 	// change this to true when in production mode
 	app.InProduction = false

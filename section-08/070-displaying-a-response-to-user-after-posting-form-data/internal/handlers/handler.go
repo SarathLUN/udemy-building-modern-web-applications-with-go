@@ -6,10 +6,10 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/069-server-side-form-validation-4/internal/config"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/069-server-side-form-validation-4/internal/forms"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/069-server-side-form-validation-4/internal/models"
-	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/069-server-side-form-validation-4/internal/renderers"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/070-displaying-a-response-to-user-after-posting-form-data/internal/config"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/070-displaying-a-response-to-user-after-posting-form-data/internal/forms"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/070-displaying-a-response-to-user-after-posting-form-data/internal/models"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/070-displaying-a-response-to-user-after-posting-form-data/internal/renderers"
 )
 
 // Repository is the repository type
@@ -95,6 +95,22 @@ func (m *Repository) PostReservation(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	log.Println("end PostReservation")
+	m.App.Session.Put(r.Context(), "reservation", reservation)
+	http.Redirect(w, r, "/reservation-summary", http.StatusSeeOther)
+}
+
+// ReservationSummary display the data post from form
+func (m *Repository) ReservationSummary(w http.ResponseWriter, r *http.Request) {
+	reservation, ok := m.App.Session.Get(r.Context(), "reservation").(models.Reservation)
+	if !ok {
+		log.Println("cannot get item from session")
+		return
+	}
+	data := make(map[string]interface{})
+	data["reservation"] = reservation
+	renderers.RenderTemplate(w, r, "reservation-summary.page.tmpl", &models.TemplateData{
+		Data: data,
+	})
 }
 
 // Generals renders the room page

@@ -1,6 +1,6 @@
 package models
 
-import "github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/069-server-side-form-validation-4/internal/forms"
+import "github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/070-displaying-a-response-to-user-after-posting-form-data/internal/forms"
 
 // TemplateData holds data send from handlers to templates.
 type TemplateData struct {
