@@ -10,13 +10,14 @@
 - [lesson 67: server side form validation 2](./067-server-side-form-validation-2/README.md)
 - [lesson 68: server side form validation 3](./068-server-side-form-validation-3/README.md)
 - [lesson 69: server side form validation 4](./069-server-side-form-validation-4/README.md)
+- [lesson 70: Display a response to user after posting form data](./070-displaying-a-response-to-user-after-posting-form-data/README.md)
 - To get started lesson 69, we need to copy our previous project directory
 
 ```shell
-cp -rfv 069-server-side-form-validation-4 070-displaying-a-response-to-user-after-posting-form-data 
+cp -rfv 070-displaying-a-response-to-user-after-posting-form-data 071-finishing-up-our-response-to-user-and-add-alerts
 vim 
 
 ```
 
-- [lesson 70: Display a response to user after posting form data](./070-displaying-a-response-to-user-after-posting-form-data/README.md)
+- [lesson 71: Finishing up our response to user and add alerts](./071-finishing-up-our-response-to-user-and-add-alerts/README.md)
 
