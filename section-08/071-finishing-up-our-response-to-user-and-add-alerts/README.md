@@ -36,3 +36,15 @@ go run cmd/web/*.go
 ```
 
 - so now we have done refactoring the cloned package, let start our new lesson.
+- currently, if user enter URL (/reservation-summary) directly, they will get blank page, and it's not good UX.
+- so we want to redirect them to somewhere else if there is no session with alert box, and the good place for now is `/make-reservation`
+- in this lesson we will use template data `FlashMessage, WarningMessage, ErrorMessage`, so let create it in the method `AddDefaultData` in file `render.go`
+- now, back to our handler function `ReservationSummary` we update the `if` block to add the error message in the session
+- then in base layout template and javascript block, we want to add alert box there via our existing function `notify()`
+- we introduce another Golang template directive call `with` which is simply find in template data.
+- all done, let test our application, and it's working well.
+- best practice of working with session is to destroy it after we're done.
+- base in function `ReservationSummary` after getting value from session into variable, let destroy it.
+- That's it, we are finishing lesson 71, let continue lesson 72.
+
+keep moving forward, happy learning!
