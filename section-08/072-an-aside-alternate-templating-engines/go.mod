@@ -1,8 +1,10 @@
-module websockets-course
+module github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/072-an-aside-alternate-templating-engines
 
-go 1.15
+go 1.21.1
 
 require (
-	github.com/CloudyKit/jet/v6 v6.0.2
-	github.com/bmizerany/pat v0.0.0-20170815010413-6226ea591a40
+	github.com/CloudyKit/jet/v6 v6.2.0
+	github.com/bmizerany/pat v0.0.0-20210406213842-e4b6760bdd6f
 )
+
+require github.com/CloudyKit/fastprinter v0.0.0-20200109182630-33d98a066a53 // indirect

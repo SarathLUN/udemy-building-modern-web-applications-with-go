@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/bmizerany/pat"
 	"net/http"
-	"websockets-course/internal/handlers"
+	"github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-08/072-an-aside-alternate-templating-engines/internal/handlers"
 )
 
 // routes handles application routes
