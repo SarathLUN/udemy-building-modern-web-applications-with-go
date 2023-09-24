@@ -23,7 +23,7 @@ Enjoy learning!
 - create new branch for git repository and we need to do this from the root directory of our project
 
 ```shell
-git checkout -b 08-071-finishing-up-our-response-to-user-and-add-alerts
+git checkout -b 08-072-an-aside-alternate-templating-engines
 
 ```
 
