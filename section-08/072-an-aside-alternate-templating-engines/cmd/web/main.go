@@ -8,6 +8,7 @@ import (
 const port = ":8080"
 
 func main() {
+  log.Println("hello world!")
 
 	mux := routes()
 

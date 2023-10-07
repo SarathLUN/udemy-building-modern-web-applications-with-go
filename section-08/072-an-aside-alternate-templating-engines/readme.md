@@ -37,6 +37,7 @@ go run cmd/web/*.go
 ```
 
 - and it's working as expected, it show the error detail if something wrong with our template.
+- in this lesson, we demonstrate another template engine called [`Jet`](https://github.com/CloudyKit/jet)
 - that's it, we are finishing lesson 72. Let continue to lesson 73.
 
 Keep moving forward, Happy Learning!...
