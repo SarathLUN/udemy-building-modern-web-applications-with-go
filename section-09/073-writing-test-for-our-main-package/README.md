@@ -25,3 +25,28 @@ go mod edit -module github.com/SarathLUN/udemy-building-modern-web-applications-
     - replace: `section-09/073-writing-test-for-our-main-package`
     - filter: `*.go`
 - now the new package for lesson 73 is ready to follow along the tutorial, let start coding.
+- after writing `main_test.go`, we can run test in our terminal
+
+```shell
+cd cmd/web
+go test
+```
+
+- output:
+
+```shell
+PASS
+ok      github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-09/073-writing-test-for-our-main-package/cmd/web    0.316s
+```
+
+- we can also use `-v` for output with verbose
+
+```shell
+=== RUN   TestRun
+--- PASS: TestRun (0.00s)
+PASS
+ok      github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-09/073-writing-test-for-our-main-package/cmd/web    0.608s
+```
+
+- let also write the test for middleware, create new file in same location: `middleware_test.go` then create function: `TestNoSurf` and `TestSessionLoad`
+- now we also want to test our `routers.go`
