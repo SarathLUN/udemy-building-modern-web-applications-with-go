@@ -49,4 +49,6 @@ ok      github.com/SarathLUN/udemy-building-modern-web-applications-with-go/sect
 ```
 
 - let also write the test for middleware, create new file in same location: `middleware_test.go` then create function: `TestNoSurf` and `TestSessionLoad`
-- now we also want to test our `routers.go`
+- now we also want to test our `routers.go` by creating the test file: `routers_test.go`.
+- then we can also check our test coverage with command: `go test -cover` this will show in command console.
+- we can extract test coverage to html with this command: `go test -coverprofile=coverage.out && go tool cover -html=coverage.out`
