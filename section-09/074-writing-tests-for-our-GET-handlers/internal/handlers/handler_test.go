@@ -20,6 +20,13 @@ var theTests = []struct {
 }{
 	{"home", "/", "GET", []postData{}, http.StatusOK},
 	{"home", "/home", "GET", []postData{}, http.StatusNotFound},
+	{"about", "/about", "GET", []postData{}, http.StatusOK},
+	{"generals-quarters", "/generals-quarters", "GET", []postData{}, http.StatusOK},
+	{"majors-suite", "/majors-suite", "GET", []postData{}, http.StatusOK},
+	{"search-availability", "/search-availability", "GET", []postData{}, http.StatusOK},
+ 	{"contact", "/contact", "GET", []postData{}, http.StatusOK},
+ 	{"make-reservation", "/make-reservation", "GET", []postData{}, http.StatusOK},
+ 	{"make-reservation", "/make-reservation", "GET", []postData{}, http.StatusNotFound},
 }
 
 func TestHandlers(t *testing.T) {
