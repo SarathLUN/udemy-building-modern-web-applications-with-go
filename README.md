@@ -19,13 +19,3 @@ Enjoy learning!
 - [Section 08 - Converting our HTML to Go templates, and creating handlers](./section-08/README.md)
 - [Section 09 - Writing Tests](./section-09/README.md)
 
-## Prepare before starting the new lesson
-
-- create new branch for git repository and we need to do this from the root directory of our project
-
-```shell
-git checkout -b 08-072-an-aside-alternate-templating-engines
-
-```
-
-- then go into above [Section 08](./section-08/README.md) to continue the lesson.
