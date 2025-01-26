@@ -42,3 +42,29 @@ go mod edit -module github.com/SarathLUN/udemy-building-modern-web-applications-
 - now the new package is ready for lesson 75 is ready to follow along the tutorial, let start coding.
 - so now we continue to write test for our POST handler in file `handler_test.go`
 - we are having 3 routes: `search-availability`, `search-availability-json`, `make-reservation`
+- in this lesson we disable middleware `NoSurf` in file `setup_test.go` otherwise we will get error and our test fail.
+
+```shell
+=== RUN   TestHandlers
+    handler_test.go:75: for test name: post-search-avail, expected status code: 200, got: 400
+    handler_test.go:75: for test name: post-search-avail-json, expected status code: 200, got: 400
+    handler_test.go:75: for test name: post-make-reservation, expected status code: 200, got: 400
+--- FAIL: TestHandlers (0.01s)
+FAIL
+exit status 1
+FAIL    github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-09/075-writing-tests-for-our-POST-handlers/internal/handlers        0.592s
+```
+
+- after disable `NoSurf`
+
+```shell
+=== RUN   TestHandlers
+2025/01/25 16:44:40 {"ok":true,"message":"available"}
+2025/01/25 16:44:40 start running PostReservation
+2025/01/25 16:44:40 end PostReservation
+2025/01/25 16:44:40 cannot get item from session
+--- PASS: TestHandlers (0.01s)
+PASS
+ok      github.com/SarathLUN/udemy-building-modern-web-applications-with-go/section-09/075-writing-tests-for-our-POST-handlers/internal/handlers        0.509s
+
+```
