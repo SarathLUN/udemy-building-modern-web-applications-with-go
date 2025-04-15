@@ -6,4 +6,4 @@
 - [lesson 76: Writing test for our Render package](./076-writing-tests-for-our-Render-package/README.md)
 - [lesson 77: Writing test for our Render package](./077-writing-tests-for-our-Render-package/README.md)
 - [lesson 78: Getting test coverage](./078-getting-test-coverage/README.md)
-
+- [lesson 79: Exercise: Writing tests for the Forms package](./079-exercise-writing-tests-for-forms-package/README.md)
